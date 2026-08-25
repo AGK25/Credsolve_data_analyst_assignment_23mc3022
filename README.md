@@ -42,7 +42,7 @@ Individual stages: `make load staging forensics golden metrics analysis dashboar
 | 2 | Analysis notebook | [`notebooks/analysis.ipynb`](notebooks/analysis.ipynb) |
 | 3 | Golden dataset + pipeline | [`outputs/golden_dataset/`](outputs/golden_dataset/), [`pipeline/`](pipeline/) |
 | 4 | Data quality report | [`docs/DATA_QUALITY_REPORT.md`](docs/DATA_QUALITY_REPORT.md) |
-| 5 | Executive dashboard | [`dashboard/executive_dashboard.html`](dashboard/executive_dashboard.html) |
+| 5 | Executive dashboard | [`dashboard/executive_dashboard.html`](https://sparkly-clafoutis-c4ab0f.netlify.app/) |
 | 6 | Executive memo | [`docs/EXECUTIVE_MEMO.md`](docs/EXECUTIVE_MEMO.md) |
 | 7 | Architecture diagram | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) |
 | + | Decision log | [`docs/DECISIONS.md`](docs/DECISIONS.md) — 17 judgment calls, each with the alternative rejected |
