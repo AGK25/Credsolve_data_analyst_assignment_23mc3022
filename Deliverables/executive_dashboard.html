@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collections Performance — Executive View</title>
+<style>
+  :root{
+    --ink:#12161c; --paper:#f7f6f3; --rule:#d6d2c8;
+    --mute:#6c7079; --claim:#b0aca2;
+    --real:#1f4d3f; --alert:#8c3b2e; --calendar:#c9a227;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    padding:26px 30px; -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"SF Mono",Menlo,Consolas,monospace}
+  header{border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:18px;
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+  h1{font-size:19px;font-weight:600;letter-spacing:-.2px}
+  header .meta{font-size:11px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+
+  .verdict{display:grid;grid-template-columns:1fr auto 1fr auto;gap:26px;align-items:center;
+    padding:18px 22px;border:1px solid var(--rule);background:#fff;margin-bottom:16px}
+  .fig{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:5px}
+  .big{font-size:52px;line-height:.92;font-weight:600;letter-spacing:-2px}
+  .strike{color:var(--claim);text-decoration:line-through;text-decoration-thickness:2px}
+  .true{color:var(--real)}
+  .arrow{font-size:26px;color:var(--claim)}
+  .because{border-left:2px solid var(--calendar);padding-left:14px;max-width:290px}
+  .because b{color:#8a7318}
+  .because p{font-size:13px;line-height:1.45}
+
+  .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:16px;margin-bottom:16px}
+  .card{border:1px solid var(--rule);background:#fff;padding:15px 18px}
+  h2{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);
+    font-weight:600;margin-bottom:3px}
+  .sub{font-size:12px;color:var(--mute);margin-bottom:12px;font-style:italic}
+
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  td{padding:5px 0;border-bottom:1px solid #eeece6}
+  tr:last-child td{border-bottom:none}
+  td.n{text-align:right;font-variant-numeric:tabular-nums}
+  .bar{height:11px;background:var(--alert);opacity:.75}
+  .bar.end{background:var(--real);opacity:1}
+  tr.total td{font-weight:600;border-top:1.5px solid var(--ink);padding-top:8px}
+
+  .flags td:first-child{color:var(--mute);padding-right:14px}
+  .flags td.v{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+
+  .rec{border:1px solid var(--ink);background:#fff;padding:16px 20px;
+    display:grid;grid-template-columns:1.35fr 1fr;gap:26px}
+  .rec h2{color:var(--ink)}
+  .lede{font-size:16px;line-height:1.4;margin:4px 0 10px}
+  .why{font-size:12.5px;line-height:1.5;color:#3b4048}
+  .why b{color:var(--alert)}
+  .split td{padding:4px 0;font-size:13px;border-bottom:none}
+  .split td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  footer{margin-top:14px;font-size:10.5px;color:var(--mute);letter-spacing:.03em;
+    border-top:1px solid var(--rule);padding-top:8px}
+  @media(max-width:900px){
+    .verdict,.grid,.rec{grid-template-columns:1fr}
+    .big{font-size:40px}.arrow{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Collections Performance — is recovery really up 11%?</h1>
+  <div class="meta">1 Jan – 31 Jul 2026 · 212 days · 30,000 accounts</div>
+</header>
+
+<section class="verdict">
+  <div>
+    <div class="fig">Reported month-on-month</div>
+    <div class="big strike">+11.19%</div>
+  </div>
+  <div class="arrow">&rarr;</div>
+  <div>
+    <div class="fig">Actual change in daily rate</div>
+    <div class="big true">+0.43%</div>
+  </div>
+  <div class="because">
+    <p><b>February has 28 days. March has 31.</b> That alone is +10.71%.
+    <b>96%</b> of the reported gain is the calendar, not performance.</p>
+  </div>
+</section>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>Where the reported number goes</h2>
+    <div class="sub">Jan–Jul payments, ₹ Cr — each step removes money never actually collected</div>
+    <table>
+      <tr><td>Raw total, all statuses</td>
+          <td style="width:44%"><div class="bar" style="width:100%"></div></td>
+          <td class="n mono">180.86</td></tr>
+      <tr><td>less FAILED</td>
+          <td><div class="bar" style="width:85.2%"></div></td>
+          <td class="n mono">154.10</td></tr>
+      <tr><td>less PENDING</td>
+          <td><div class="bar" style="width:75.2%"></div></td>
+          <td class="n mono">136.02</td></tr>
+      <tr><td>less REVERSED rows</td>
+          <td><div class="bar" style="width:70.1%"></div></td>
+          <td class="n mono">126.70</td></tr>
+      <tr class="total"><td>Money actually collected</td>
+          <td><div class="bar end" style="width:65.0%"></div></td>
+          <td class="n mono">117.54</td></tr>
+    </table>
+    <p class="why" style="margin-top:11px">Summing the amount column without filtering status
+    overstates recovery by <b>35%</b>. ₹9.16 Cr came in and left again.</p>
+  </div>
+
+  <div class="card">
+    <h2>Net collections per day</h2>
+    <div class="sub">Normalised for month length — the series is flat</div>
+    <svg viewBox="0 0 400 150" width="100%" height="152" role="img"
+         aria-label="Daily collection rate is flat across seven months">
+      <line x1="34" y1="120" x2="392" y2="120" stroke="#d6d2c8"/>
+      <line x1="34" y1="14"  x2="34"  y2="120" stroke="#d6d2c8"/>
+      <text x="2" y="34" font-size="9" fill="#6c7079" font-family="monospace">0.65</text>
+      <text x="2" y="118" font-size="9" fill="#6c7079" font-family="monospace">0.55</text>
+      <rect x="82" y="14" width="102" height="106" fill="#c9a227" opacity=".13"/>
+      <polyline fill="none" stroke="#1f4d3f" stroke-width="2.5"
+        points="46,66 97,62 148,60 199,86 250,74 301,84 352,66"/>
+      <g fill="#1f4d3f">
+        <circle cx="46" cy="66" r="3.5"/><circle cx="97" cy="62" r="3.5"/>
+        <circle cx="148" cy="60" r="3.5"/><circle cx="199" cy="86" r="3.5"/>
+        <circle cx="250" cy="74" r="3.5"/><circle cx="301" cy="84" r="3.5"/>
+        <circle cx="352" cy="66" r="3.5"/>
+      </g>
+      <text x="133" y="28" font-size="9.5" fill="#8a7318" text-anchor="middle"
+            font-family="monospace">the "+11%"</text>
+      <g font-size="9" fill="#6c7079" text-anchor="middle" font-family="monospace">
+        <text x="46" y="134">Jan</text><text x="97" y="134">Feb</text>
+        <text x="148" y="134">Mar</text><text x="199" y="134">Apr</text>
+        <text x="250" y="134">May</text><text x="301" y="134">Jun</text>
+        <text x="352" y="134">Jul</text>
+      </g>
+    </svg>
+    <p class="why">Daily rate varies <b>1.77%</b> around its mean. Jan&rarr;Jul: <b>&minus;1.1%</b>.
+    The trend is not distinguishable from zero.</p>
+  </div>
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>What this data cannot tell us</h2>
+    <div class="sub">17 forensic tests · 13 confirmed · 4 explanations ruled out</div>
+    <table class="flags">
+      <tr><td>Effect of reaching a borrower on payment</td><td class="v">+0.72 pp · p=0.21</td></tr>
+      <tr><td>Accounts never touched (no control group)</td><td class="v">37 of 30,000</td></tr>
+      <tr><td>Recovery/account/day, DPD 0–5 vs 90+</td><td class="v">₹200 vs ₹195</td></tr>
+      <tr><td>Kept promise → money within 30 days</td><td class="v">7.8%</td></tr>
+      <tr><td>Attribution credit, 1-day vs 90-day window</td><td class="v">3.3% → 83.4%</td></tr>
+      <tr><td>Metrics not computable at all</td><td class="v">3 of 10</td></tr>
+      <tr><td>Cost data anywhere in the extract</td><td class="v">none</td></tr>
+    </table>
+  </div>
+
+  <div class="rec">
+    <div>
+      <h2>The ₹10 Cr decision</h2>
+      <p class="lede">Don't deploy yet. Spend <b>₹1.2 Cr</b> finding out which lever works.</p>
+      <p class="why">All six options — telephony, agents, AI voice, targeting, digital, field —
+      show effects <b>indistinguishable from zero</b>. Days-past-due and risk grade, the two
+      strongest predictors in any collections book, carry no signal here. Choosing between them
+      on this evidence would be inventing precision we don't have.</p>
+    </div>
+    <div>
+      <table class="split">
+        <tr><td>90-day randomised holdout<br><span style="font-size:11px;color:#6c7079">60,000 accounts · 80% power at 2 pp</span></td><td>₹1.2 Cr</td></tr>
+        <tr><td>Repair the PTP status field</td><td>₹0.15 Cr</td></tr>
+        <tr><td>Held pending results</td><td>₹8.8 Cr</td></tr>
+      </table>
+      <table class="split" style="margin-top:10px;border-top:1.5px solid #12161c">
+        <tr><td>If 2 pp lift confirmed</td><td>₹9.3 Cr/yr</td></tr>
+        <tr><td>Break-even on ₹10 Cr</td><td>13 months</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Every figure reproducible from <span class="mono">sql/</span> · Raw → Rejected → Golden lineage
+  reconciles exactly · August 2026 excluded (8 of 31 days) · Extract covers 7.3 months, not 12
+</footer>
+
+</body>
+</html>
