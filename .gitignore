@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
+# Regenerable — rebuilt by `make all`
+outputs/golden_dataset/

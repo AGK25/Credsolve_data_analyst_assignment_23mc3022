@@ -1,0 +1,66 @@
+{
+  "step1_change_detection": {
+    "strategy_versions_concurrent": true,
+    "targeting_mix_range": {
+      "avg_dpd_targeted": 2.5600000000000023,
+      "pct_high_risk": 1.4100000000000037,
+      "avg_priority": 0.11000000000000032
+    },
+    "conclusion": "No targeting change is observable: strategy versions run concurrently and the targeted population's composition is stable."
+  },
+  "did": {
+    "break_date": "2026-03-25",
+    "n_treatment": 10053,
+    "n_control": 12938,
+    "n_obs": 712721,
+    "parallel_trends_coef": -4.481143785440707,
+    "parallel_trends_p": 0.7007547184815379,
+    "parallel_trends_holds": true,
+    "estimate_inr_per_account_week": 20.68986059692197,
+    "se": 58.56474962517925,
+    "p_value": 0.7238771829401718,
+    "ci95": [
+      -94.09704866842937,
+      135.4767698622733
+    ],
+    "annual_portfolio_inr": 10815748.766204542,
+    "annual_portfolio_ci95": [
+      -49189796.77371346,
+      70821294.30612254
+    ],
+    "significant": false
+  },
+  "placebos": [
+    {
+      "date": "2026-02-10",
+      "estimate": 4.8813731161754,
+      "p_value": 0.9427901186129203
+    },
+    {
+      "date": "2026-02-25",
+      "estimate": -14.493937755378475,
+      "p_value": 0.8178869379409104
+    },
+    {
+      "date": "2026-05-10",
+      "estimate": 40.35950315396802,
+      "p_value": 0.49834142758545374
+    },
+    {
+      "date": "2026-06-15",
+      "estimate": 31.106916645445285,
+      "p_value": 0.6521473053457517
+    }
+  ],
+  "n_placebos_significant": 0,
+  "counterfactual": {
+    "actual_net_inr": 1175415427.73,
+    "counterfactual_net_inr": 1169133403.7890813,
+    "counterfactual_ci95": [
+      1134280867.7494576,
+      1203985939.8287048
+    ],
+    "delta_inr": 6282023.940918801,
+    "verdict": "The estimated effect is statistically indistinguishable from zero, so the best estimate of the counterfactual is that recovery would have been the same."
+  }
+}

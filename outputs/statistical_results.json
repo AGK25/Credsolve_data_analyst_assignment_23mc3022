@@ -1,0 +1,164 @@
+{
+  "trend": {
+    "n_days": 212,
+    "mean_daily_inr": 5647273.511933961,
+    "slope_inr_per_day": -1156.5063155909434,
+    "slope_ci95": [
+      -3024.9466105379265,
+      711.9339793560398
+    ],
+    "pct_change_per_month": -0.6225622314851289,
+    "pct_change_per_month_ci95": [
+      -1.628367685149731,
+      0.38324322217947315
+    ],
+    "r_squared": 0.006959807736557945,
+    "p_value": 0.22642426100583207,
+    "kendall_tau": -0.04122328534382546,
+    "kendall_p": 0.37188149620669464
+  },
+  "decomposition": {
+    "reported_mom_pct": 11.124882582468999,
+    "calendar_effect_pct": 10.71428571428572,
+    "true_daily_rate_pct": 0.37086168739133285,
+    "share_explained_by_calendar": 0.9630920268021245
+  },
+  "contact_effect": {
+    "answered_n": 13535,
+    "answered_pct_paid": 44.69892870336166,
+    "never_called_n": 1592,
+    "never_called_pct_paid": 43.21608040201005,
+    "lift_pp": 1.482848301351608,
+    "z": 1.1260383680682997,
+    "p_value": 0.2601492793688305,
+    "mde_pp_at_80pct_power": 3.6999999999999997
+  },
+  "agent_skill": {
+    "n_agents": 1000,
+    "mean_calls_per_agent": 89.523,
+    "pooled_answer_rate_pct": 19.86975414139383,
+    "observed_sd_pp": 4.275727409485899,
+    "expected_sd_pp_if_pure_chance": 4.244093620056026,
+    "share_of_variance_from_skill": 0.014742178713057491,
+    "chi2": 1010.727045369316,
+    "dof": 999,
+    "p_value": 0.39118299208296126
+  },
+  "ptp_integrity": {
+    "kept_pct_paid_30d": 7.752283359322789,
+    "broken_pct_paid_30d": 6.632989237865144,
+    "gap_pp": 1.1192941214576453,
+    "z": 2.0602061825982987,
+    "p_value": 0.03937883412316921,
+    "chi2_all_statuses": 5.143060019655015,
+    "chi2_p": 0.16161635222286427,
+    "by_status": {
+      "BROKEN": {
+        "n": 4553,
+        "pct_paid_30d": 6.632989237865144
+      },
+      "CANCELLED": {
+        "n": 4543,
+        "pct_paid_30d": 7.065815540391812
+      },
+      "KEPT": {
+        "n": 4489,
+        "pct_paid_30d": 7.752283359322789
+      },
+      "OPEN": {
+        "n": 4415,
+        "pct_paid_30d": 7.565118912797282
+      }
+    }
+  },
+  "simpsons": {
+    "strict_simpsons_present": false,
+    "strict_simpsons_months": [],
+    "calendar_confound_segments_flipping": [
+      "MEDIUM"
+    ],
+    "note": "Strict Simpson's paradox is NOT present: no month-pair shows the aggregate moving opposite to every subgroup. What IS present is a month-length confound: segments whose Feb->Mar growth fell below the +10.71% calendar effect appear positive in totals and negative per day. That is a normalisation artefact, not an aggregation paradox, and must not be labelled Simpson's."
+  },
+  "driver_coverage": [
+    {
+      "driver": "Portfolio mix",
+      "analysable": true,
+      "basis": "accounts.risk_segment"
+    },
+    {
+      "driver": "DPD",
+      "analysable": true,
+      "basis": "accounts.dpd"
+    },
+    {
+      "driver": "Client",
+      "analysable": false,
+      "basis": "NO SUCH COLUMN in any of 17 tables"
+    },
+    {
+      "driver": "Geography",
+      "analysable": true,
+      "basis": "borrowers.city / state"
+    },
+    {
+      "driver": "Language",
+      "analysable": false,
+      "basis": "NO SUCH COLUMN in any of 17 tables"
+    },
+    {
+      "driver": "Agent",
+      "analysable": true,
+      "basis": "usable as behavioural key only"
+    },
+    {
+      "driver": "Agent tenure",
+      "analysable": false,
+      "basis": "agents dim unresolvable (finding E1)"
+    },
+    {
+      "driver": "Campaign",
+      "analysable": true,
+      "basis": "calls.campaign_id"
+    },
+    {
+      "driver": "Channel",
+      "analysable": true,
+      "basis": "campaigns.channel + event streams"
+    },
+    {
+      "driver": "Telephony vendor",
+      "analysable": true,
+      "basis": "vendor_telephony"
+    },
+    {
+      "driver": "Calling time",
+      "analysable": false,
+      "basis": "hour-of-day uniform (finding C2)"
+    },
+    {
+      "driver": "Attempt frequency",
+      "analysable": true,
+      "basis": "call_attempts.attempt_no"
+    },
+    {
+      "driver": "Borrower segment",
+      "analysable": true,
+      "basis": "accounts.risk_segment"
+    }
+  ],
+  "structural_break": {
+    "best_break_date": "2026-03-25",
+    "F": 2.837671973957283,
+    "raw_p": 0.06083142902349303,
+    "bonferroni_p": 1.0,
+    "n_candidates_tested": 152,
+    "significant": false
+  },
+  "uniformity": {
+    "volume_chi2": 23.113169129720852,
+    "volume_p": 0.45417874919572465,
+    "answer_rate_chi2": 24.029269386068535,
+    "answer_rate_p": 0.4021891392693726,
+    "answer_rate_range_pp": 2.5718011389922673
+  }
+}

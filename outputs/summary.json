@@ -1,0 +1,1624 @@
+{
+  "manifest": [
+    {
+      "table": "golden.dim_account",
+      "rows": 30000,
+      "columns": 16,
+      "file": "golden__dim_account.csv"
+    },
+    {
+      "table": "golden.dim_borrower",
+      "rows": 11015,
+      "columns": 9,
+      "file": "golden__dim_borrower.csv"
+    },
+    {
+      "table": "golden.dim_date",
+      "rows": 212,
+      "columns": 5,
+      "file": "golden__dim_date.csv"
+    },
+    {
+      "table": "golden.fct_payment",
+      "rows": 24058,
+      "columns": 18,
+      "file": "golden__fct_payment.csv"
+    },
+    {
+      "table": "golden.fct_call",
+      "rows": 86757,
+      "columns": 19,
+      "file": "golden__fct_call.csv"
+    },
+    {
+      "table": "golden.lineage",
+      "rows": 4,
+      "columns": 6,
+      "file": "golden__lineage.csv"
+    },
+    {
+      "table": "metrics.daily",
+      "rows": 212,
+      "columns": 12,
+      "file": "metrics__daily.csv"
+    },
+    {
+      "table": "metrics.monthly",
+      "rows": 7,
+      "columns": 14,
+      "file": "metrics__monthly.csv"
+    },
+    {
+      "table": "metrics.definitions",
+      "rows": 10,
+      "columns": 6,
+      "file": "metrics__definitions.csv"
+    },
+    {
+      "table": "metrics.headline_decomposition",
+      "rows": 3,
+      "columns": 4,
+      "file": "metrics__headline_decomposition.csv"
+    },
+    {
+      "table": "forensics.findings",
+      "rows": 17,
+      "columns": 9,
+      "file": "forensics__findings.csv"
+    },
+    {
+      "table": "reject.ledger",
+      "rows": 25620,
+      "columns": 8,
+      "file": "reject__ledger.csv"
+    }
+  ],
+  "scoreboard": {
+    "avg_net_lakh_per_day": 55.45,
+    "net_change_jan_to_jul_pct": -1.12,
+    "avg_contact_rate_pct": 23.35,
+    "cohort_accounts": 30000.0,
+    "total_net_cr": 117.54,
+    "total_reversed_cr": 9.16,
+    "metrics_unusable": 3.0,
+    "metrics_reviewed": 10.0,
+    "issues_confirmed": 13.0,
+    "hypotheses_rejected": 4.0
+  },
+  "monthly": [
+    {
+      "month": "2026-01",
+      "days_in_month": 31,
+      "net_lakh_per_day": "56.27",
+      "gross_lakh_per_day": "60.02",
+      "net_cr_total": "17.44",
+      "calls_per_day": "407.7",
+      "contact_rate_pct": "23.59",
+      "naive_mom_pct": null,
+      "true_mom_pct": null,
+      "calendar_effect_pct": null
+    },
+    {
+      "month": "2026-02",
+      "days_in_month": 28,
+      "net_lakh_per_day": "56.63",
+      "gross_lakh_per_day": "60.70",
+      "net_cr_total": "15.86",
+      "calls_per_day": "413.0",
+      "contact_rate_pct": "22.93",
+      "naive_mom_pct": "-8.65",
+      "true_mom_pct": "1.14",
+      "calendar_effect_pct": "-9.68"
+    },
+    {
+      "month": "2026-03",
+      "days_in_month": 31,
+      "net_lakh_per_day": "56.35",
+      "gross_lakh_per_day": "60.97",
+      "net_cr_total": "17.47",
+      "calls_per_day": "414.3",
+      "contact_rate_pct": "23.61",
+      "naive_mom_pct": "11.19",
+      "true_mom_pct": "0.43",
+      "calendar_effect_pct": "10.71"
+    },
+    {
+      "month": "2026-04",
+      "days_in_month": 30,
+      "net_lakh_per_day": "53.72",
+      "gross_lakh_per_day": "58.18",
+      "net_cr_total": "16.12",
+      "calls_per_day": "408.3",
+      "contact_rate_pct": "22.53",
+      "naive_mom_pct": "-7.65",
+      "true_mom_pct": "-4.57",
+      "calendar_effect_pct": "-3.23"
+    },
+    {
+      "month": "2026-05",
+      "days_in_month": 31,
+      "net_lakh_per_day": "55.26",
+      "gross_lakh_per_day": "59.39",
+      "net_cr_total": "17.13",
+      "calls_per_day": "411.1",
+      "contact_rate_pct": "23.96",
+      "naive_mom_pct": "5.49",
+      "true_mom_pct": "2.09",
+      "calendar_effect_pct": "3.33"
+    },
+    {
+      "month": "2026-06",
+      "days_in_month": 30,
+      "net_lakh_per_day": "54.25",
+      "gross_lakh_per_day": "58.56",
+      "net_cr_total": "16.27",
+      "calls_per_day": "404.5",
+      "contact_rate_pct": "24.03",
+      "naive_mom_pct": "-4.58",
+      "true_mom_pct": "-1.40",
+      "calendar_effect_pct": "-3.23"
+    },
+    {
+      "month": "2026-07",
+      "days_in_month": 31,
+      "net_lakh_per_day": "55.64",
+      "gross_lakh_per_day": "60.54",
+      "net_cr_total": "17.25",
+      "calls_per_day": "406.0",
+      "contact_rate_pct": "22.82",
+      "naive_mom_pct": "6.82",
+      "true_mom_pct": "3.38",
+      "calendar_effect_pct": "3.33"
+    }
+  ],
+  "decomposition": [
+    {
+      "step": 1,
+      "component": "Reported Feb -> Mar improvement",
+      "value_pct": "11.19",
+      "note": "What leadership was told."
+    },
+    {
+      "step": 2,
+      "component": "less: calendar effect (28 -> 31 days)",
+      "value_pct": "10.71",
+      "note": "March simply contains three more collection days than February. No performance change of any kind."
+    },
+    {
+      "step": 3,
+      "component": "equals: true change in daily collection rate",
+      "value_pct": "0.43",
+      "note": "The entire genuine movement, and it is inside daily noise."
+    }
+  ],
+  "lineage": [
+    {
+      "entity": "accounts",
+      "raw_rows": 30000,
+      "rejected_rows": 0,
+      "clean_rows": 30000,
+      "golden_rows": 30000,
+      "reconciles": true
+    },
+    {
+      "entity": "borrowers",
+      "raw_rows": 30600,
+      "rejected_rows": 19585,
+      "clean_rows": 11015,
+      "golden_rows": 11015,
+      "reconciles": true
+    },
+    {
+      "entity": "calls",
+      "raw_rows": 91350,
+      "rejected_rows": 4593,
+      "clean_rows": 90000,
+      "golden_rows": 86757,
+      "reconciles": true
+    },
+    {
+      "entity": "payments",
+      "raw_rows": 25500,
+      "rejected_rows": 1442,
+      "clean_rows": 25000,
+      "golden_rows": 24058,
+      "reconciles": true
+    }
+  ],
+  "reject_summary": [
+    {
+      "source_table": "borrowers",
+      "reason_code": "SUPERSEDED_VERSION",
+      "rows": 19585,
+      "lakh_impact": "0"
+    },
+    {
+      "source_table": "calls",
+      "reason_code": "OUT_OF_WINDOW",
+      "rows": 3243,
+      "lakh_impact": "0"
+    },
+    {
+      "source_table": "calls",
+      "reason_code": "DUPLICATE_REINGEST",
+      "rows": 1339,
+      "lakh_impact": "0"
+    },
+    {
+      "source_table": "payments",
+      "reason_code": "OUT_OF_WINDOW",
+      "rows": 942,
+      "lakh_impact": "485.42"
+    },
+    {
+      "source_table": "payments",
+      "reason_code": "DUPLICATE_REINGEST",
+      "rows": 500,
+      "lakh_impact": "259.02"
+    },
+    {
+      "source_table": "calls",
+      "reason_code": "CONFLICTING_TIMESTAMP",
+      "rows": 11,
+      "lakh_impact": "0"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "A1",
+      "trap": "A",
+      "title": "Re-ingested payment rows (identical on every business column)",
+      "verdict": "CONFIRMED",
+      "evidence": "486 surplus rows across 486 payment_ids; each is byte-identical to an earlier row on all 8 business columns.",
+      "rows_affected": 486.0,
+      "amount_impact": "25011462.19",
+      "confidence": "Fact",
+      "so_what": "Genuine double-count. These must be removed or reported recovery is overstated."
+    },
+    {
+      "finding_id": "A2",
+      "trap": "A",
+      "title": "payment_reference is NOT a unique key -- deduplicating on it destroys real payments",
+      "verdict": "CONFIRMED",
+      "evidence": "3745 references repeat across 8042 rows. 3407 of those references (7366 rows) point at different accounts, different amounts AND different timestamps -- they are distinct payments with a colliding reference. A further 382 rows carry a BLANK reference and would collapse into a single bogus group. Applying that rule would DELETE 4678 rows, of which only 500 are genuine duplicates -- destroying 4178 legitimate payments worth Rs 25.01 Cr of successful collections.",
+      "rows_affected": 4178.0,
+      "amount_impact": "250107970.05",
+      "confidence": "Fact",
+      "so_what": "The obvious cleaning rule is a trap. Dedup on payment_reference and you delete thousands of legitimate payments, then conclude recovery is far worse than it is."
+    },
+    {
+      "finding_id": "A3",
+      "trap": "A",
+      "title": "Suspected operational double-charges (same account, same amount, <24h apart)",
+      "verdict": "REJECTED",
+      "evidence": "0 candidate pairs found on distinct payment_ids.",
+      "rows_affected": 0.0,
+      "amount_impact": "0",
+      "confidence": "Strong Evidence",
+      "so_what": "Distinct from re-ingestion: identifiers differ, so this is a billing/operations issue rather than a pipeline issue."
+    },
+    {
+      "finding_id": "B1",
+      "trap": "B",
+      "title": "Payments carry no campaign or interaction key -- all channel attribution is inferred",
+      "verdict": "CONFIRMED",
+      "evidence": "payments has 12 columns and none links to a campaign, call or message. calls is the only fact table carrying campaign_id (91350 of 91350 rows populated).",
+      "rows_affected": NaN,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Channel ROI numbers in existing reporting are the output of an undocumented attribution rule. They cannot be reproduced or audited."
+    },
+    {
+      "finding_id": "B2",
+      "trap": "B",
+      "title": "Attribution window choice swings credited recovery by a factor of several",
+      "verdict": "CONFIRMED",
+      "evidence": "Same payments, last-touch rule, four windows: 1d -> 1.39% (Rs 1.8 Cr); 7d -> 8.99% (Rs 12.2 Cr); 30d -> 31.63% (Rs 42.5 Cr); 90d -> 59.44% (Rs 79.5 Cr)",
+      "rows_affected": NaN,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Nobody can validate a channel ROI claim without being told the attribution window. Changing it silently changes the answer."
+    },
+    {
+      "finding_id": "C1",
+      "trap": "C",
+      "title": "Declared timezones are real and misfile calls across day and month boundaries",
+      "verdict": "CONFIRMED",
+      "evidence": "8924 of 91350 calls (9.8%) fall on a different calendar DAY once the declared timezone is applied; 310 cross a MONTH boundary. Zone mix: Asia/Dubai=30464, Asia/Kolkata=30485, UTC=30401.",
+      "rows_affected": 8924.0,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Daily operational reports are wrong for roughly a fifth of calls. Month-end numbers move."
+    },
+    {
+      "finding_id": "C2",
+      "trap": "C",
+      "title": "Call volume is uniform across all 24 hours -- \"calling time\" cannot be analysed",
+      "verdict": "CONFIRMED",
+      "evidence": "Hourly call counts range 3665 to 3964 against a flat expectation of 3806 (max deviation 7.9%). Answer rate by hour ranges 18.78% to 21.35%.",
+      "rows_affected": NaN,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "The brief asks us to investigate calling time as a driver. There is no diurnal pattern to find -- any \"best hour\" recommendation from this data would be fabricated from noise."
+    },
+    {
+      "finding_id": "D1",
+      "trap": "D",
+      "title": "Disposition schema versions did NOT change over time -- they coexist throughout",
+      "verdict": "REJECTED",
+      "evidence": "All 3 versions are present in every one of the 8 months, in near-equal volume (legacy=11726, v1=11620, v2=11654). A genuine migration would show versions succeeding one another; these run in parallel end to end.",
+      "rows_affected": NaN,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "A plausible-sounding explanation for the trend that turns out to be false. Reporting it as a cause would have been wrong."
+    },
+    {
+      "finding_id": "D2",
+      "trap": "D",
+      "title": "Two disposition codes mean the same thing and coexist in every version",
+      "verdict": "CONFIRMED",
+      "evidence": "PTP and PROMISE_TO_PAY both appear in all versions (legacy: PTP=1296 / PROMISE_TO_PAY=1332; v1: PTP=1285 / PROMISE_TO_PAY=1309; v2: PTP=1323 / PROMISE_TO_PAY=1285). Counting only one undercounts promises by 50.1%.",
+      "rows_affected": 7830.0,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Any PTP-rate metric filtering on a single code silently halves the numerator. This is the kind of error that survives for years."
+    },
+    {
+      "finding_id": "E1",
+      "trap": "E",
+      "title": "The agents dimension has no resolvable identity -- it is unusable for attribute analysis",
+      "verdict": "CONFIRMED",
+      "evidence": "30000 rows resolve to only 1000 agent_ids, 1099 employee_codes and just 10 distinct names across 5 teams. A single agent_id carries 9.5 different names on average; a single name maps to 948.9 different agent_ids. The relationship is many-to-many in both directions.",
+      "rows_affected": 30000.0,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Agent tenure, team and vendor analysis -- all named in the brief -- cannot be performed. agent_id remains valid as a behavioural key; every attribute hanging off it does not."
+    },
+    {
+      "finding_id": "E2",
+      "trap": "E",
+      "title": "Calls with a blank agent_id",
+      "verdict": "CONFIRMED",
+      "evidence": "1827 calls (2.00%) carry an empty agent_id and cannot be attributed to any agent.",
+      "rows_affected": 1827.0,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Agent-level denominators are short by this amount unless the blanks are handled explicitly."
+    },
+    {
+      "finding_id": "F1",
+      "trap": "F",
+      "title": "Portfolio mix did NOT change -- it is stable to within a percentage point",
+      "verdict": "REJECTED",
+      "evidence": "Across the seven complete months, HIGH-risk share moves only 24.68 to 25.65% and mean DPD only 55.87 to 56.90 days. No acquisition, no re-segmentation.",
+      "rows_affected": NaN,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Mix shift is the most common real-world explanation for a jump like this. Here it is ruled out, which strengthens the calendar explanation."
+    },
+    {
+      "finding_id": "F2",
+      "trap": "F",
+      "title": "No accounts were originated during the observation window",
+      "verdict": "CONFIRMED",
+      "evidence": "All 30000 accounts were opened between 2024-01-01 and 2025-11-30 -- entirely before the 2026-01-01 observation window. The portfolio is a closed cohort.",
+      "rows_affected": 30000.0,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "A closed cohort should show recovery DECAY over time as collectable accounts are exhausted. Flat performance is therefore mildly negative news, not neutral."
+    },
+    {
+      "finding_id": "G1",
+      "trap": "G",
+      "title": "The contactable population is NOT shrinking -- no denominator manipulation detected",
+      "verdict": "REJECTED",
+      "evidence": "Distinct accounts contacted per month ranges 9526 to 10414, and per-day it ranges 331.8 to 340.2 -- flat once month length is removed. Unsuccessful accounts are not disappearing from the base.",
+      "rows_affected": NaN,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Denominator shrinkage is the classic way a conversion rate is inflated. Ruled out here -- which again points back to the calendar."
+    },
+    {
+      "finding_id": "G2",
+      "trap": "G",
+      "title": "Status history contains events recorded BEFORE they occurred",
+      "verdict": "CONFIRMED",
+      "evidence": "30191 of 60000 history rows have recorded_at earlier than event_at (impossible). Ingest lag ranges to 24 hours. 18952 accounts carry contradictory status sequences.",
+      "rows_affected": 30191.0,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Point-in-time reconstruction of account state is unreliable. Any as-of-date report built on this table can silently disagree with itself."
+    },
+    {
+      "finding_id": "G3",
+      "trap": "G",
+      "title": "The accounts table disagrees with its own status history",
+      "verdict": "CONFIRMED",
+      "evidence": "26296 of 30000 accounts (87.7%) have a current status in accounts that does not match the most recent event in account_status_history.",
+      "rows_affected": 26296.0,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "There is no single source of truth for account status. Which table you join to changes your answer -- exactly the situation the brief warns about."
+    },
+    {
+      "finding_id": "H1",
+      "trap": "H",
+      "title": "Fact tables reference borrowers that do not exist in the borrower table",
+      "verdict": "CONFIRMED",
+      "evidence": "7109 of 86757 calls (8.19%) and 1973 of 24058 payments (8.20%) carry a borrower_id absent from the borrower dimension. 985 distinct borrower_ids appear in fact tables but never in borrowers.csv at all -- a referential break present in the SOURCE data, not introduced by cleaning.",
+      "rows_affected": 9082.0,
+      "amount_impact": null,
+      "confidence": "Fact",
+      "so_what": "Any borrower-level cut -- geography, contactability, borrower segment -- silently drops ~8% of activity. The rows are retained and flagged rather than filtered, so the loss is visible instead of invisible."
+    }
+  ],
+  "metric_definitions": [
+    {
+      "metric_id": "M01",
+      "metric_name": "Contact rate",
+      "business_defn": "answered calls / calls placed",
+      "problem": "Counts CALL rows, but a single outreach attempt can produce several call rows and 120,000 call_attempts sit behind 90,000 calls. It also treats a borrower reached ten times as ten contacts, so the metric rises when the dialler gets more aggressive even if no new person is reached.",
+      "our_defn": "distinct accounts reached at least once in the period / distinct accounts attempted in the period. Account-level, not event-level, so it cannot be inflated by redialling.",
+      "verdict": "USABLE_WITH_CARE"
+    },
+    {
+      "metric_id": "M02",
+      "metric_name": "RPC (right party contact)",
+      "business_defn": "calls with a \"contact\" disposition / calls placed",
+      "problem": "There is no field identifying whether the party reached was the borrower. WRONG_NUMBER is one of nine disposition codes and is assigned independently of call_status: FAILED 21.2%, BUSY 20.1%, NO_ANSWER 20.1%, ANSWERED 19.5%, VOICEMAIL 19.2%. At least 61.3% of WRONG_NUMBER dispositions sit on calls that never connected, where a wrong-number determination is impossible.",
+      "our_defn": "Not computable from this data. We report answered-call rate instead and state plainly that true RPC requires a party-identification field that does not exist.",
+      "verdict": "UNUSABLE"
+    },
+    {
+      "metric_id": "M03",
+      "metric_name": "PTP rate",
+      "business_defn": "dispositions where code = PTP / total dispositions",
+      "problem": "PTP and PROMISE_TO_PAY are separate codes for the same concept, present in every schema version. Filtering on either one alone undercounts promises by roughly 50%.",
+      "our_defn": "dispositions where code IN (PTP, PROMISE_TO_PAY) / distinct accounts contacted. Synonyms collapsed at the clean layer so the error cannot recur downstream.",
+      "verdict": "USABLE_WITH_CARE"
+    },
+    {
+      "metric_id": "M04",
+      "metric_name": "PTP kept rate",
+      "business_defn": "promises with status = KEPT / total promises",
+      "problem": "The status field does not correspond to reality. A promise marked KEPT is followed by an actual payment within 30 days 7.75% of the time; one marked BROKEN, 6.63%. The field carries essentially no information about whether money arrived.",
+      "our_defn": "Ignore the status field entirely. Measure fulfilment directly: promises followed by a successful payment of at least the promised amount within 30 days / total promises.",
+      "verdict": "UNUSABLE"
+    },
+    {
+      "metric_id": "M05",
+      "metric_name": "Recovery rate",
+      "business_defn": "sum of payment amounts in the month / opening outstanding",
+      "problem": "Includes FAILED, PENDING and REVERSED payments; and the monthly numerator makes a 31-day month look 11% better than a 28-day one.",
+      "our_defn": "Net collections per day = (SUCCESS - REVERSED) / days in period. Day-normalised and net of money that left again.",
+      "verdict": "USABLE"
+    },
+    {
+      "metric_id": "M06",
+      "metric_name": "Recovery per account",
+      "business_defn": "total recovered / total accounts",
+      "problem": "The denominator silently changes as accounts close or are written off, so the ratio can rise with no extra rupee collected.",
+      "our_defn": "Net collections per day / accounts in the fixed opening cohort. The cohort is frozen at window start, so the denominator cannot drift.",
+      "verdict": "USABLE"
+    },
+    {
+      "metric_id": "M07",
+      "metric_name": "Recovery per agent-hour",
+      "business_defn": "total recovered / agent hours logged",
+      "problem": "agent_sessions has no reliable link to outcomes, and the agents dimension cannot resolve identity, so hours cannot be attributed to a person or team with confidence.",
+      "our_defn": "Computed at portfolio level only, from summed session hours. Never broken down by agent, team or vendor -- those cuts are not supportable.",
+      "verdict": "USABLE_WITH_CARE"
+    },
+    {
+      "metric_id": "M08",
+      "metric_name": "Cost per rupee recovered",
+      "business_defn": "channel cost / amount attributed to that channel",
+      "problem": "No cost data exists in the extract, and the attributed amount depends entirely on an unstated attribution window: across all four channels, last-touch credit covers 3.2% of successful payments at 1 day, 20.2% at 7 days, 59.8% at 30 days and 83.8% at 90 days -- a 26x swing from the window choice alone.",
+      "our_defn": "Not computable. We report the attribution sensitivity instead, so the reader can see how much any such figure would move.",
+      "verdict": "UNUSABLE"
+    },
+    {
+      "metric_id": "M09",
+      "metric_name": "Channel conversion",
+      "business_defn": "accounts that paid after a channel touch / accounts touched",
+      "problem": "Every account is touched on several channels, so the denominators overlap and the shares sum to far more than 100%. It also conflates correlation with causation -- untouched accounts pay at nearly the same rate.",
+      "our_defn": "Reported only as a comparison against the never-contacted baseline, with a confidence interval on the difference. Absolute per-channel conversion is not reported at all.",
+      "verdict": "USABLE_WITH_CARE"
+    },
+    {
+      "metric_id": "M10",
+      "metric_name": "Month-on-month improvement",
+      "business_defn": "this month total / last month total - 1",
+      "problem": "Confounded with month length. February to March carries a mechanical +10.71% before any performance change whatsoever.",
+      "our_defn": "Day-normalised rate change, with a 95% confidence interval from the daily series. Monthly totals are never compared directly.",
+      "verdict": "USABLE"
+    }
+  ],
+  "daily_series": [
+    {
+      "d": "2026-01-01",
+      "net_lakh": "40.666"
+    },
+    {
+      "d": "2026-01-02",
+      "net_lakh": "70.121"
+    },
+    {
+      "d": "2026-01-03",
+      "net_lakh": "48.691"
+    },
+    {
+      "d": "2026-01-04",
+      "net_lakh": "47.253"
+    },
+    {
+      "d": "2026-01-05",
+      "net_lakh": "59.241"
+    },
+    {
+      "d": "2026-01-06",
+      "net_lakh": "57.501"
+    },
+    {
+      "d": "2026-01-07",
+      "net_lakh": "46.507"
+    },
+    {
+      "d": "2026-01-08",
+      "net_lakh": "60.342"
+    },
+    {
+      "d": "2026-01-09",
+      "net_lakh": "58.612"
+    },
+    {
+      "d": "2026-01-10",
+      "net_lakh": "63.880"
+    },
+    {
+      "d": "2026-01-11",
+      "net_lakh": "46.047"
+    },
+    {
+      "d": "2026-01-12",
+      "net_lakh": "66.209"
+    },
+    {
+      "d": "2026-01-13",
+      "net_lakh": "48.701"
+    },
+    {
+      "d": "2026-01-14",
+      "net_lakh": "65.028"
+    },
+    {
+      "d": "2026-01-15",
+      "net_lakh": "49.812"
+    },
+    {
+      "d": "2026-01-16",
+      "net_lakh": "45.244"
+    },
+    {
+      "d": "2026-01-17",
+      "net_lakh": "53.677"
+    },
+    {
+      "d": "2026-01-18",
+      "net_lakh": "66.201"
+    },
+    {
+      "d": "2026-01-19",
+      "net_lakh": "49.712"
+    },
+    {
+      "d": "2026-01-20",
+      "net_lakh": "57.944"
+    },
+    {
+      "d": "2026-01-21",
+      "net_lakh": "50.693"
+    },
+    {
+      "d": "2026-01-22",
+      "net_lakh": "55.274"
+    },
+    {
+      "d": "2026-01-23",
+      "net_lakh": "60.306"
+    },
+    {
+      "d": "2026-01-24",
+      "net_lakh": "65.370"
+    },
+    {
+      "d": "2026-01-25",
+      "net_lakh": "52.221"
+    },
+    {
+      "d": "2026-01-26",
+      "net_lakh": "48.165"
+    },
+    {
+      "d": "2026-01-27",
+      "net_lakh": "53.393"
+    },
+    {
+      "d": "2026-01-28",
+      "net_lakh": "66.879"
+    },
+    {
+      "d": "2026-01-29",
+      "net_lakh": "75.337"
+    },
+    {
+      "d": "2026-01-30",
+      "net_lakh": "66.915"
+    },
+    {
+      "d": "2026-01-31",
+      "net_lakh": "48.549"
+    },
+    {
+      "d": "2026-02-01",
+      "net_lakh": "52.053"
+    },
+    {
+      "d": "2026-02-02",
+      "net_lakh": "54.947"
+    },
+    {
+      "d": "2026-02-03",
+      "net_lakh": "52.883"
+    },
+    {
+      "d": "2026-02-04",
+      "net_lakh": "45.831"
+    },
+    {
+      "d": "2026-02-05",
+      "net_lakh": "65.429"
+    },
+    {
+      "d": "2026-02-06",
+      "net_lakh": "64.418"
+    },
+    {
+      "d": "2026-02-07",
+      "net_lakh": "61.279"
+    },
+    {
+      "d": "2026-02-08",
+      "net_lakh": "52.528"
+    },
+    {
+      "d": "2026-02-09",
+      "net_lakh": "56.475"
+    },
+    {
+      "d": "2026-02-10",
+      "net_lakh": "45.587"
+    },
+    {
+      "d": "2026-02-11",
+      "net_lakh": "58.658"
+    },
+    {
+      "d": "2026-02-12",
+      "net_lakh": "55.508"
+    },
+    {
+      "d": "2026-02-13",
+      "net_lakh": "66.792"
+    },
+    {
+      "d": "2026-02-14",
+      "net_lakh": "42.985"
+    },
+    {
+      "d": "2026-02-15",
+      "net_lakh": "58.293"
+    },
+    {
+      "d": "2026-02-16",
+      "net_lakh": "54.319"
+    },
+    {
+      "d": "2026-02-17",
+      "net_lakh": "55.328"
+    },
+    {
+      "d": "2026-02-18",
+      "net_lakh": "63.796"
+    },
+    {
+      "d": "2026-02-19",
+      "net_lakh": "71.773"
+    },
+    {
+      "d": "2026-02-20",
+      "net_lakh": "48.296"
+    },
+    {
+      "d": "2026-02-21",
+      "net_lakh": "63.285"
+    },
+    {
+      "d": "2026-02-22",
+      "net_lakh": "59.245"
+    },
+    {
+      "d": "2026-02-23",
+      "net_lakh": "52.004"
+    },
+    {
+      "d": "2026-02-24",
+      "net_lakh": "66.151"
+    },
+    {
+      "d": "2026-02-25",
+      "net_lakh": "57.087"
+    },
+    {
+      "d": "2026-02-26",
+      "net_lakh": "64.463"
+    },
+    {
+      "d": "2026-02-27",
+      "net_lakh": "50.824"
+    },
+    {
+      "d": "2026-02-28",
+      "net_lakh": "45.466"
+    },
+    {
+      "d": "2026-03-01",
+      "net_lakh": "50.429"
+    },
+    {
+      "d": "2026-03-02",
+      "net_lakh": "62.254"
+    },
+    {
+      "d": "2026-03-03",
+      "net_lakh": "53.636"
+    },
+    {
+      "d": "2026-03-04",
+      "net_lakh": "70.012"
+    },
+    {
+      "d": "2026-03-05",
+      "net_lakh": "42.415"
+    },
+    {
+      "d": "2026-03-06",
+      "net_lakh": "52.476"
+    },
+    {
+      "d": "2026-03-07",
+      "net_lakh": "50.629"
+    },
+    {
+      "d": "2026-03-08",
+      "net_lakh": "59.723"
+    },
+    {
+      "d": "2026-03-09",
+      "net_lakh": "58.020"
+    },
+    {
+      "d": "2026-03-10",
+      "net_lakh": "65.533"
+    },
+    {
+      "d": "2026-03-11",
+      "net_lakh": "50.974"
+    },
+    {
+      "d": "2026-03-12",
+      "net_lakh": "57.071"
+    },
+    {
+      "d": "2026-03-13",
+      "net_lakh": "59.449"
+    },
+    {
+      "d": "2026-03-14",
+      "net_lakh": "59.256"
+    },
+    {
+      "d": "2026-03-15",
+      "net_lakh": "57.339"
+    },
+    {
+      "d": "2026-03-16",
+      "net_lakh": "65.773"
+    },
+    {
+      "d": "2026-03-17",
+      "net_lakh": "68.769"
+    },
+    {
+      "d": "2026-03-18",
+      "net_lakh": "35.769"
+    },
+    {
+      "d": "2026-03-19",
+      "net_lakh": "73.395"
+    },
+    {
+      "d": "2026-03-20",
+      "net_lakh": "56.206"
+    },
+    {
+      "d": "2026-03-21",
+      "net_lakh": "60.156"
+    },
+    {
+      "d": "2026-03-22",
+      "net_lakh": "52.136"
+    },
+    {
+      "d": "2026-03-23",
+      "net_lakh": "70.196"
+    },
+    {
+      "d": "2026-03-24",
+      "net_lakh": "57.868"
+    },
+    {
+      "d": "2026-03-25",
+      "net_lakh": "43.117"
+    },
+    {
+      "d": "2026-03-26",
+      "net_lakh": "63.621"
+    },
+    {
+      "d": "2026-03-27",
+      "net_lakh": "51.581"
+    },
+    {
+      "d": "2026-03-28",
+      "net_lakh": "58.697"
+    },
+    {
+      "d": "2026-03-29",
+      "net_lakh": "45.043"
+    },
+    {
+      "d": "2026-03-30",
+      "net_lakh": "48.825"
+    },
+    {
+      "d": "2026-03-31",
+      "net_lakh": "46.466"
+    },
+    {
+      "d": "2026-04-01",
+      "net_lakh": "62.600"
+    },
+    {
+      "d": "2026-04-02",
+      "net_lakh": "60.431"
+    },
+    {
+      "d": "2026-04-03",
+      "net_lakh": "40.321"
+    },
+    {
+      "d": "2026-04-04",
+      "net_lakh": "55.720"
+    },
+    {
+      "d": "2026-04-05",
+      "net_lakh": "55.848"
+    },
+    {
+      "d": "2026-04-06",
+      "net_lakh": "43.773"
+    },
+    {
+      "d": "2026-04-07",
+      "net_lakh": "47.973"
+    },
+    {
+      "d": "2026-04-08",
+      "net_lakh": "58.905"
+    },
+    {
+      "d": "2026-04-09",
+      "net_lakh": "37.294"
+    },
+    {
+      "d": "2026-04-10",
+      "net_lakh": "62.346"
+    },
+    {
+      "d": "2026-04-11",
+      "net_lakh": "54.393"
+    },
+    {
+      "d": "2026-04-12",
+      "net_lakh": "51.764"
+    },
+    {
+      "d": "2026-04-13",
+      "net_lakh": "55.974"
+    },
+    {
+      "d": "2026-04-14",
+      "net_lakh": "60.694"
+    },
+    {
+      "d": "2026-04-15",
+      "net_lakh": "47.608"
+    },
+    {
+      "d": "2026-04-16",
+      "net_lakh": "52.857"
+    },
+    {
+      "d": "2026-04-17",
+      "net_lakh": "39.617"
+    },
+    {
+      "d": "2026-04-18",
+      "net_lakh": "42.000"
+    },
+    {
+      "d": "2026-04-19",
+      "net_lakh": "61.009"
+    },
+    {
+      "d": "2026-04-20",
+      "net_lakh": "44.701"
+    },
+    {
+      "d": "2026-04-21",
+      "net_lakh": "46.305"
+    },
+    {
+      "d": "2026-04-22",
+      "net_lakh": "62.691"
+    },
+    {
+      "d": "2026-04-23",
+      "net_lakh": "63.363"
+    },
+    {
+      "d": "2026-04-24",
+      "net_lakh": "60.654"
+    },
+    {
+      "d": "2026-04-25",
+      "net_lakh": "58.159"
+    },
+    {
+      "d": "2026-04-26",
+      "net_lakh": "49.591"
+    },
+    {
+      "d": "2026-04-27",
+      "net_lakh": "50.949"
+    },
+    {
+      "d": "2026-04-28",
+      "net_lakh": "69.128"
+    },
+    {
+      "d": "2026-04-29",
+      "net_lakh": "60.054"
+    },
+    {
+      "d": "2026-04-30",
+      "net_lakh": "54.878"
+    },
+    {
+      "d": "2026-05-01",
+      "net_lakh": "53.152"
+    },
+    {
+      "d": "2026-05-02",
+      "net_lakh": "57.186"
+    },
+    {
+      "d": "2026-05-03",
+      "net_lakh": "55.822"
+    },
+    {
+      "d": "2026-05-04",
+      "net_lakh": "54.050"
+    },
+    {
+      "d": "2026-05-05",
+      "net_lakh": "57.973"
+    },
+    {
+      "d": "2026-05-06",
+      "net_lakh": "52.698"
+    },
+    {
+      "d": "2026-05-07",
+      "net_lakh": "60.909"
+    },
+    {
+      "d": "2026-05-08",
+      "net_lakh": "54.934"
+    },
+    {
+      "d": "2026-05-09",
+      "net_lakh": "48.173"
+    },
+    {
+      "d": "2026-05-10",
+      "net_lakh": "57.779"
+    },
+    {
+      "d": "2026-05-11",
+      "net_lakh": "64.603"
+    },
+    {
+      "d": "2026-05-12",
+      "net_lakh": "65.356"
+    },
+    {
+      "d": "2026-05-13",
+      "net_lakh": "58.201"
+    },
+    {
+      "d": "2026-05-14",
+      "net_lakh": "60.273"
+    },
+    {
+      "d": "2026-05-15",
+      "net_lakh": "52.747"
+    },
+    {
+      "d": "2026-05-16",
+      "net_lakh": "57.939"
+    },
+    {
+      "d": "2026-05-17",
+      "net_lakh": "57.363"
+    },
+    {
+      "d": "2026-05-18",
+      "net_lakh": "39.608"
+    },
+    {
+      "d": "2026-05-19",
+      "net_lakh": "68.626"
+    },
+    {
+      "d": "2026-05-20",
+      "net_lakh": "57.902"
+    },
+    {
+      "d": "2026-05-21",
+      "net_lakh": "54.243"
+    },
+    {
+      "d": "2026-05-22",
+      "net_lakh": "48.452"
+    },
+    {
+      "d": "2026-05-23",
+      "net_lakh": "54.682"
+    },
+    {
+      "d": "2026-05-24",
+      "net_lakh": "61.183"
+    },
+    {
+      "d": "2026-05-25",
+      "net_lakh": "53.850"
+    },
+    {
+      "d": "2026-05-26",
+      "net_lakh": "50.304"
+    },
+    {
+      "d": "2026-05-27",
+      "net_lakh": "65.424"
+    },
+    {
+      "d": "2026-05-28",
+      "net_lakh": "32.255"
+    },
+    {
+      "d": "2026-05-29",
+      "net_lakh": "52.487"
+    },
+    {
+      "d": "2026-05-30",
+      "net_lakh": "58.013"
+    },
+    {
+      "d": "2026-05-31",
+      "net_lakh": "47.024"
+    },
+    {
+      "d": "2026-06-01",
+      "net_lakh": "62.985"
+    },
+    {
+      "d": "2026-06-02",
+      "net_lakh": "52.678"
+    },
+    {
+      "d": "2026-06-03",
+      "net_lakh": "52.758"
+    },
+    {
+      "d": "2026-06-04",
+      "net_lakh": "50.132"
+    },
+    {
+      "d": "2026-06-05",
+      "net_lakh": "43.880"
+    },
+    {
+      "d": "2026-06-06",
+      "net_lakh": "43.030"
+    },
+    {
+      "d": "2026-06-07",
+      "net_lakh": "55.708"
+    },
+    {
+      "d": "2026-06-08",
+      "net_lakh": "54.866"
+    },
+    {
+      "d": "2026-06-09",
+      "net_lakh": "63.348"
+    },
+    {
+      "d": "2026-06-10",
+      "net_lakh": "46.262"
+    },
+    {
+      "d": "2026-06-11",
+      "net_lakh": "58.921"
+    },
+    {
+      "d": "2026-06-12",
+      "net_lakh": "74.382"
+    },
+    {
+      "d": "2026-06-13",
+      "net_lakh": "49.447"
+    },
+    {
+      "d": "2026-06-14",
+      "net_lakh": "67.640"
+    },
+    {
+      "d": "2026-06-15",
+      "net_lakh": "60.169"
+    },
+    {
+      "d": "2026-06-16",
+      "net_lakh": "59.390"
+    },
+    {
+      "d": "2026-06-17",
+      "net_lakh": "66.566"
+    },
+    {
+      "d": "2026-06-18",
+      "net_lakh": "48.201"
+    },
+    {
+      "d": "2026-06-19",
+      "net_lakh": "48.974"
+    },
+    {
+      "d": "2026-06-20",
+      "net_lakh": "47.204"
+    },
+    {
+      "d": "2026-06-21",
+      "net_lakh": "54.748"
+    },
+    {
+      "d": "2026-06-22",
+      "net_lakh": "58.774"
+    },
+    {
+      "d": "2026-06-23",
+      "net_lakh": "39.523"
+    },
+    {
+      "d": "2026-06-24",
+      "net_lakh": "69.545"
+    },
+    {
+      "d": "2026-06-25",
+      "net_lakh": "48.463"
+    },
+    {
+      "d": "2026-06-26",
+      "net_lakh": "55.950"
+    },
+    {
+      "d": "2026-06-27",
+      "net_lakh": "42.515"
+    },
+    {
+      "d": "2026-06-28",
+      "net_lakh": "51.650"
+    },
+    {
+      "d": "2026-06-29",
+      "net_lakh": "65.916"
+    },
+    {
+      "d": "2026-06-30",
+      "net_lakh": "33.764"
+    },
+    {
+      "d": "2026-07-01",
+      "net_lakh": "54.969"
+    },
+    {
+      "d": "2026-07-02",
+      "net_lakh": "58.491"
+    },
+    {
+      "d": "2026-07-03",
+      "net_lakh": "58.512"
+    },
+    {
+      "d": "2026-07-04",
+      "net_lakh": "52.063"
+    },
+    {
+      "d": "2026-07-05",
+      "net_lakh": "66.077"
+    },
+    {
+      "d": "2026-07-06",
+      "net_lakh": "58.398"
+    },
+    {
+      "d": "2026-07-07",
+      "net_lakh": "68.326"
+    },
+    {
+      "d": "2026-07-08",
+      "net_lakh": "54.145"
+    },
+    {
+      "d": "2026-07-09",
+      "net_lakh": "58.302"
+    },
+    {
+      "d": "2026-07-10",
+      "net_lakh": "56.427"
+    },
+    {
+      "d": "2026-07-11",
+      "net_lakh": "44.777"
+    },
+    {
+      "d": "2026-07-12",
+      "net_lakh": "38.384"
+    },
+    {
+      "d": "2026-07-13",
+      "net_lakh": "50.774"
+    },
+    {
+      "d": "2026-07-14",
+      "net_lakh": "51.002"
+    },
+    {
+      "d": "2026-07-15",
+      "net_lakh": "56.505"
+    },
+    {
+      "d": "2026-07-16",
+      "net_lakh": "62.481"
+    },
+    {
+      "d": "2026-07-17",
+      "net_lakh": "65.678"
+    },
+    {
+      "d": "2026-07-18",
+      "net_lakh": "63.933"
+    },
+    {
+      "d": "2026-07-19",
+      "net_lakh": "61.353"
+    },
+    {
+      "d": "2026-07-20",
+      "net_lakh": "43.541"
+    },
+    {
+      "d": "2026-07-21",
+      "net_lakh": "52.344"
+    },
+    {
+      "d": "2026-07-22",
+      "net_lakh": "57.694"
+    },
+    {
+      "d": "2026-07-23",
+      "net_lakh": "57.803"
+    },
+    {
+      "d": "2026-07-24",
+      "net_lakh": "57.494"
+    },
+    {
+      "d": "2026-07-25",
+      "net_lakh": "58.497"
+    },
+    {
+      "d": "2026-07-26",
+      "net_lakh": "54.285"
+    },
+    {
+      "d": "2026-07-27",
+      "net_lakh": "53.446"
+    },
+    {
+      "d": "2026-07-28",
+      "net_lakh": "52.118"
+    },
+    {
+      "d": "2026-07-29",
+      "net_lakh": "49.332"
+    },
+    {
+      "d": "2026-07-30",
+      "net_lakh": "60.560"
+    },
+    {
+      "d": "2026-07-31",
+      "net_lakh": "47.220"
+    }
+  ],
+  "august_partial": {
+    "n_payments": 942,
+    "gross_lakh": "485.42",
+    "first_day": "2026-08-01",
+    "last_day": "2026-08-09",
+    "days_present": 9
+  },
+  "statistical_results": {
+    "trend": {
+      "n_days": 212,
+      "mean_daily_inr": 5647273.511933961,
+      "slope_inr_per_day": -1156.5063155909434,
+      "slope_ci95": [
+        -3024.9466105379265,
+        711.9339793560398
+      ],
+      "pct_change_per_month": -0.6225622314851289,
+      "pct_change_per_month_ci95": [
+        -1.628367685149731,
+        0.38324322217947315
+      ],
+      "r_squared": 0.006959807736557945,
+      "p_value": 0.22642426100583207,
+      "kendall_tau": -0.04122328534382546,
+      "kendall_p": 0.37188149620669464
+    },
+    "decomposition": {
+      "reported_mom_pct": 11.124882582468999,
+      "calendar_effect_pct": 10.71428571428572,
+      "true_daily_rate_pct": 0.37086168739133285,
+      "share_explained_by_calendar": 0.9630920268021245
+    },
+    "contact_effect": {
+      "answered_n": 13535,
+      "answered_pct_paid": 44.69892870336166,
+      "never_called_n": 1592,
+      "never_called_pct_paid": 43.21608040201005,
+      "lift_pp": 1.482848301351608,
+      "z": 1.1260383680682997,
+      "p_value": 0.2601492793688305,
+      "mde_pp_at_80pct_power": 3.6999999999999997
+    },
+    "agent_skill": {
+      "n_agents": 1000,
+      "mean_calls_per_agent": 89.523,
+      "pooled_answer_rate_pct": 19.86975414139383,
+      "observed_sd_pp": 4.275727409485899,
+      "expected_sd_pp_if_pure_chance": 4.244093620056026,
+      "share_of_variance_from_skill": 0.014742178713057491,
+      "chi2": 1010.727045369316,
+      "dof": 999,
+      "p_value": 0.39118299208296126
+    },
+    "ptp_integrity": {
+      "kept_pct_paid_30d": 7.752283359322789,
+      "broken_pct_paid_30d": 6.632989237865144,
+      "gap_pp": 1.1192941214576453,
+      "z": 2.0602061825982987,
+      "p_value": 0.03937883412316921,
+      "chi2_all_statuses": 5.143060019655015,
+      "chi2_p": 0.16161635222286427,
+      "by_status": {
+        "BROKEN": {
+          "n": 4553,
+          "pct_paid_30d": 6.632989237865144
+        },
+        "CANCELLED": {
+          "n": 4543,
+          "pct_paid_30d": 7.065815540391812
+        },
+        "KEPT": {
+          "n": 4489,
+          "pct_paid_30d": 7.752283359322789
+        },
+        "OPEN": {
+          "n": 4415,
+          "pct_paid_30d": 7.565118912797282
+        }
+      }
+    },
+    "simpsons": {
+      "strict_simpsons_present": false,
+      "strict_simpsons_months": [],
+      "calendar_confound_segments_flipping": [
+        "MEDIUM"
+      ],
+      "note": "Strict Simpson's paradox is NOT present: no month-pair shows the aggregate moving opposite to every subgroup. What IS present is a month-length confound: segments whose Feb->Mar growth fell below the +10.71% calendar effect appear positive in totals and negative per day. That is a normalisation artefact, not an aggregation paradox, and must not be labelled Simpson's."
+    },
+    "driver_coverage": [
+      {
+        "driver": "Portfolio mix",
+        "analysable": true,
+        "basis": "accounts.risk_segment"
+      },
+      {
+        "driver": "DPD",
+        "analysable": true,
+        "basis": "accounts.dpd"
+      },
+      {
+        "driver": "Client",
+        "analysable": false,
+        "basis": "NO SUCH COLUMN in any of 17 tables"
+      },
+      {
+        "driver": "Geography",
+        "analysable": true,
+        "basis": "borrowers.city / state"
+      },
+      {
+        "driver": "Language",
+        "analysable": false,
+        "basis": "NO SUCH COLUMN in any of 17 tables"
+      },
+      {
+        "driver": "Agent",
+        "analysable": true,
+        "basis": "usable as behavioural key only"
+      },
+      {
+        "driver": "Agent tenure",
+        "analysable": false,
+        "basis": "agents dim unresolvable (finding E1)"
+      },
+      {
+        "driver": "Campaign",
+        "analysable": true,
+        "basis": "calls.campaign_id"
+      },
+      {
+        "driver": "Channel",
+        "analysable": true,
+        "basis": "campaigns.channel + event streams"
+      },
+      {
+        "driver": "Telephony vendor",
+        "analysable": true,
+        "basis": "vendor_telephony"
+      },
+      {
+        "driver": "Calling time",
+        "analysable": false,
+        "basis": "hour-of-day uniform (finding C2)"
+      },
+      {
+        "driver": "Attempt frequency",
+        "analysable": true,
+        "basis": "call_attempts.attempt_no"
+      },
+      {
+        "driver": "Borrower segment",
+        "analysable": true,
+        "basis": "accounts.risk_segment"
+      }
+    ],
+    "structural_break": {
+      "best_break_date": "2026-03-25",
+      "F": 2.837671973957283,
+      "raw_p": 0.06083142902349303,
+      "bonferroni_p": 1.0,
+      "n_candidates_tested": 152,
+      "significant": false
+    },
+    "uniformity": {
+      "volume_chi2": 23.113169129720852,
+      "volume_p": 0.45417874919572465,
+      "answer_rate_chi2": 24.029269386068535,
+      "answer_rate_p": 0.4021891392693726,
+      "answer_rate_range_pp": 2.5718011389922673
+    }
+  },
+  "counterfactual_results": {
+    "step1_change_detection": {
+      "strategy_versions_concurrent": true,
+      "targeting_mix_range": {
+        "avg_dpd_targeted": 2.5600000000000023,
+        "pct_high_risk": 1.4100000000000037,
+        "avg_priority": 0.11000000000000032
+      },
+      "conclusion": "No targeting change is observable: strategy versions run concurrently and the targeted population's composition is stable."
+    },
+    "did": {
+      "break_date": "2026-03-25",
+      "n_treatment": 10053,
+      "n_control": 12938,
+      "n_obs": 712721,
+      "parallel_trends_coef": -4.481143785440707,
+      "parallel_trends_p": 0.7007547184815379,
+      "parallel_trends_holds": true,
+      "estimate_inr_per_account_week": 20.68986059692197,
+      "se": 58.56474962517925,
+      "p_value": 0.7238771829401718,
+      "ci95": [
+        -94.09704866842937,
+        135.4767698622733
+      ],
+      "annual_portfolio_inr": 10815748.766204542,
+      "annual_portfolio_ci95": [
+        -49189796.77371346,
+        70821294.30612254
+      ],
+      "significant": false
+    },
+    "placebos": [
+      {
+        "date": "2026-02-10",
+        "estimate": 4.8813731161754,
+        "p_value": 0.9427901186129203
+      },
+      {
+        "date": "2026-02-25",
+        "estimate": -14.493937755378475,
+        "p_value": 0.8178869379409104
+      },
+      {
+        "date": "2026-05-10",
+        "estimate": 40.35950315396802,
+        "p_value": 0.49834142758545374
+      },
+      {
+        "date": "2026-06-15",
+        "estimate": 31.106916645445285,
+        "p_value": 0.6521473053457517
+      }
+    ],
+    "n_placebos_significant": 0,
+    "counterfactual": {
+      "actual_net_inr": 1175415427.73,
+      "counterfactual_net_inr": 1169133403.7890813,
+      "counterfactual_ci95": [
+        1134280867.7494576,
+        1203985939.8287048
+      ],
+      "delta_inr": 6282023.940918801,
+      "verdict": "The estimated effect is statistically indistinguishable from zero, so the best estimate of the counterfactual is that recovery would have been the same."
+    }
+  }
+}
