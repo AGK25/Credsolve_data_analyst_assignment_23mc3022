@@ -43,8 +43,8 @@ Individual stages: `make load staging forensics golden metrics analysis dashboar
 | 3 | Golden dataset + pipeline | [`outputs/golden_dataset/`](outputs/golden_dataset/), [`pipeline/`](pipeline/) |
 | 4 | Data quality report | [`docs/DATA_QUALITY_REPORT.md`](docs/DATA_QUALITY_REPORT.md) |
 | 5 | Executive dashboard | [`dashboard/executive_dashboard.html`](https://sparkly-clafoutis-c4ab0f.netlify.app/) |
-| 6 | Executive memo | [`docs/EXECUTIVE_MEMO.md`](docs/EXECUTIVE_MEMO.md) |
-| 7 | Architecture diagram | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) |
+| 6 | Executive memo | [`docs/EXECUTIVE_MEMO.md`](https://drive.google.com/file/d/1Y9ZwUmKabP5NMR1uuFHa33OWATqCMGK_/view?usp=sharing) |
+| 7 | Architecture diagram | [`docs/ARCHITECTURE.md`](https://drive.google.com/file/d/1jJPsPYaveHolJWn9rGeHivLnbZR6U_u_/view?usp=sharing) |
 | + | Decision log | [`docs/DECISIONS.md`](docs/DECISIONS.md) — 17 judgment calls, each with the alternative rejected |
 
 ## The three findings that matter
